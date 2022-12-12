@@ -1,9 +1,24 @@
-# SSIMP_web
+# ssimp_web
 
-## 1. 拟定要实现的功能
+## Project setup
+```
+npm install
+```
 
-1.  旅游官网
-5.  问题反馈
-6.  天气信息
-7.  文章内容
-8.  购票系统集成（待定）
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
