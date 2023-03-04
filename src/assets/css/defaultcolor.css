@@ -1,0 +1,44 @@
+:root {
+  /* 主主题颜色 */
+  --main-theme-color: #ffffff;
+  --main-theme-color-hover: #ffffff;
+  --main-theme-color-shade: #ffffff;
+  --main-theme-color-transparent: rgba(253, 209, 219, 0.1);
+  /* 背景颜色 */
+  --main-bg-color: #ffffff;
+  --main-bg-color-shade: #ffffff;
+
+  --main-panel-bg-color: #ffffff;
+  --main-panel-bg-color-shade: #fffffff7;
+  --main-panel-box-shadow-white: rgba(232, 243, 255, 0.911);
+
+  /* 文字颜色 */
+  --main-text-color: #adb6d6adb6d6;
+  --main-text-color-shade: #818181;
+  --main-text-color-white: rgb(252, 239, 239);
+  --main-text-color-white-hover: rgb(255, 255, 255);
+
+  /* 文字阴影 */
+  --main-text-shadow: 0 0 4px rgba(122, 121, 121, 0.494);
+  --main-text-shadow-logo-big: 0 0 8px rgba(21, 21, 21, 0.4);
+
+  /* 边框颜色 */
+  --main-box-shadow: 0 0 2px 0 rgba(21, 21, 21, 0.6);
+  --main-box-shadow-color: rgba(21, 21, 21, 0.6);
+  --main-box-shadow-light: 0 0 2px 0 rgba(234, 229, 229, 0.6);
+  --main-box-shadow-light-color: rgba(255, 248, 248, 0.6);
+
+  --big-box-shadow: 0 1px 5px 0 rgba(21, 21, 21, 0.6);
+  --big-box-shadow-light: 0 0 5px 0 rgba(255, 248, 248, 0.6);
+
+  --main-btn-bg-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "logofont";
+  src: "src\assets\font\YunFengFeiYunTi-2.ttf";
+}
