@@ -15,6 +15,3 @@ export default {
   },
 };
 </script>
-<style>
-@import "src\assets\css\defaultcolor.css";
-</style>
