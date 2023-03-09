@@ -79,7 +79,7 @@ export default {
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--main-bg-color);
   width: 100%;
 }
 .title {

@@ -15,7 +15,6 @@
     <ul class="biaoti">
       <li><a href="#">首页</a></li>
       <li><a href="#">关于</a></li>
-      <li><a href="#">天气</a></li>
     </ul>
   </div>
 </template>
@@ -57,6 +56,7 @@ export default {
   align-items: center;
   transition: 0.5s;
   background-color: rgba(0, 0, 0, 0.155);
+  z-index: 100;
 }
 
 .logo {
