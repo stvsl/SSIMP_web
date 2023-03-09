@@ -1,14 +1,12 @@
 <template>
-  <div>
+  <div class="card">
     <a href="#">
-      <el-row>
-        <el-card>
-          <img src="../assets/photo/北镇闾山.jpg" class="image" />
-          <li class="text">好吃的汉堡</li>
-          <div class="date">更新时间</div>
-          <div class="look">浏览量</div>
-        </el-card>
-      </el-row>
+      <el-card :body-style="{ padding: '5px' }">
+        <img src="../assets/photo/北镇闾山.jpg" class="image" />
+        <li class="text">好吃的汉堡</li>
+        <div class="date">更新时间</div>
+        <div class="look">浏览量</div>
+      </el-card>
     </a>
   </div>
 </template>
@@ -26,6 +24,9 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  margin: 10px;
+}
 .look {
   text-align: right;
   font-size: 6px;
@@ -39,7 +40,7 @@ export default {
   width: 150px;
 }
 .el-card {
-  width: 340px;
+  width: 300px;
 }
 .text {
   text-overflow: ellipsis;

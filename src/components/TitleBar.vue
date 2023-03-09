@@ -13,8 +13,8 @@
       </div>
     </div>
     <ul class="biaoti">
-      <li><a href="#">首页</a></li>
-      <li><a href="#">关于</a></li>
+      <li><a href="/">首页</a></li>
+      <li><a href="/#/about">关于</a></li>
     </ul>
   </div>
 </template>

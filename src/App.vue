@@ -4,10 +4,13 @@
     <div class="nullpanel"></div>
   </nav>
   <router-view />
+  <div v-if="goTop" class="backtop" @click="backTop">
+    <font-awesome-icon icon="fa-solid fa-arrow-up" />
+  </div>
   <!-- 页脚 -->
   <footer>
     <div class="footerbox">
-      <h1 style="font-family: logofont"></h1>
+      <h1 style="font-family: logofont">北镇闾山</h1>
     </div>
     <div class="footerbox">
       <p>2023 北镇闾山景区巡查检测平台</p>
@@ -33,14 +36,33 @@ export default {
   components: {
     TitleBar,
   },
+  data() {
+    return {
+      goTop: false,
+    };
+  },
+  methods: {
+    backTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        this.goTop = true;
+      } else {
+        this.goTop = false;
+      }
+    });
+  },
 };
 </script>
 
 <style>
-@import "./assets/css/DefaultColor.css";
-body {
-  /* background-image: ; */
-}
+@import "./assets/css/defaultcolor.css";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -68,6 +90,22 @@ nav a.router-link-exact-active {
 
 .nullpanel {
   height: 50px;
+}
+
+.backtop {
+  position: fixed;
+  display: flex;
+  bottom: 220px;
+  right: 70px;
+  width: 50px;
+  height: 50px;
+  color: var(--main-text-color-shade);
+  background-color: var(--main-theme-color-shade);
+  border-radius: 10px;
+  box-shadow: 0 0 2px 0 var(--main-text-color);
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
 }
 </style>
 <style scoped>

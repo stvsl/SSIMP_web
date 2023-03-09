@@ -1,8 +1,14 @@
 <template>
-  <div class="searchbar">
-    <li class="height" v-for="item in items" :key="item">
-      <SearchBar></SearchBar>
-    </li>
+  <div>
+    <!-- 搜索结果 -->
+    <div class="head">
+      <h1>XXX的搜索结果:</h1>
+    </div>
+    <div class="searchbar">
+      <li class="height" v-for="item in items" :key="item">
+        <SearchBar></SearchBar>
+      </li>
+    </div>
   </div>
 </template>
 
@@ -15,6 +21,18 @@ export default {
   data() {
     return {
       items: [
+        { message: "Foo" },
+        { message: "Bar" },
+        { message: "Bar" },
+        { message: "Bar" },
+        { message: "Foo" },
+        { message: "Bar" },
+        { message: "Bar" },
+        { message: "Bar" },
+        { message: "Foo" },
+        { message: "Bar" },
+        { message: "Bar" },
+        { message: "Bar" },
         { message: "Foo" },
         { message: "Bar" },
         { message: "Bar" },
@@ -36,8 +54,12 @@ export default {
   flex-wrap: wrap;
   margin: auto;
   min-height: 100vh;
+  justify-content: left;
 }
 
+.head {
+  margin-top: 40px;
+}
 .height {
   margin-top: 15px;
   margin-bottom: 0;

@@ -69,6 +69,7 @@ export default {
   font-weight: 400;
   color: var(--main-text-color-white);
   margin: 0;
+  margin-top: 10px;
   text-align: left;
   margin-left: 20px;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
