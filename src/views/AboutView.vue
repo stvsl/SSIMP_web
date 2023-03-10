@@ -12,6 +12,7 @@ import AboutWeb from '@/components/AboutWeb.vue';
           <p>巫闾山海拔高度约为500米，山势险峻，自</p>
           <p>然风光秀美，是一处天然氧吧，是锦州市周</p>
           <p>边游客们不可错过的旅游胜地。<i></i></p>
+          <p><img src="../assets/photo/北镇闾山.jpg" /></p>
           <p>医巫闾山历史文化源远流长，早在唐代就被</p>
           <p>列为“辽东四大名山”之一。山上有传说中</p>
           <p>的巫峡、鬼洞、仙人洞等地方，是古代巫术</p>
@@ -48,6 +49,11 @@ export default {
 };
 </script>
 <style scoped>
+img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 .center {
   margin: auto;
   width: 310px;
