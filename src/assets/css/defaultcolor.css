@@ -9,6 +9,7 @@
   --main-daohanglan-bg-color: #302f2f6e;
   --main-bg-color-shade: #ffffff;
   --main-daohanglan-bg-color-shade: #4c4a4a3c;
+  --main-about-bg-color: #767373b8;
 
   --main-panel-bg-color: #ffffff;
   --main-panel-bg-color-shade: #fffffff7;
@@ -34,6 +35,7 @@
   --big-box-shadow-light: 0 0 5px 0 rgba(255, 248, 248, 0.6);
 
   --main-btn-bg-color: #ffffff;
+  --main-hr-color: rgba(21, 21, 21, 0.6);
 }
 
 a {

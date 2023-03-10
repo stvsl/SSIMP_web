@@ -30,14 +30,15 @@ export default {
 .look {
   text-align: right;
   font-size: 6px;
+  width: 100px;
   display: inline-block;
-  width: 150px;
+  margin-left: 0px;
 }
 .date {
   text-align: left;
   font-size: 6px;
   display: inline-block;
-  width: 150px;
+  width: 100px;
 }
 .el-card {
   width: 300px;
