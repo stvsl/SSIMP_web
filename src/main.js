@@ -1,4 +1,4 @@
-import { createApp } from "vue";
+import { createApp, defineComponent, onMouned, ref, toRefs } from "vue";
 import App from "./App.vue";
 import store from "./store";
 import router from "./router";
@@ -33,5 +33,9 @@ createApp(App)
   .use(router)
   .use(store)
   .use(ElementPlus)
+  .use(defineComponent)
+  .use(onMouned)
+  .use(ref)
+  .use(toRefs)
   .component("font-awesome-icon", FontAwesomeIcon)
   .mount("#app");

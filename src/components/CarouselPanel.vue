@@ -33,6 +33,7 @@ export default {
     },
   },
   methods: {},
+  setup() {},
 };
 </script>
 

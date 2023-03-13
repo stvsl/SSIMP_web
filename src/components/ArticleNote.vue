@@ -1,16 +1,20 @@
 <template>
   <div class="article">
-    <el-container
-      ><el-aside
-        ><div class="img-container"><img src="../assets/photo/1.png" /></div></el-aside
-      ><el-main
-        ><h2 class="title">标题</h2>
-        <h3 class="text">
-          简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
-        </h3>
-        <h5 class="look">浏览量 <span>发布时间</span></h5>
-      </el-main></el-container
-    >
+    <router-link :to="'/article?aid=' + aid">
+      <el-container
+        ><el-aside
+          ><div class="img-container"><img :src="coverimg" /></div></el-aside
+        ><el-main
+          ><h2 class="title">{{ title }}</h2>
+          <h3 class="text">
+            {{ introduction }}
+          </h3>
+          <h5 class="look">
+            浏览量:{{ look }} <span>发布时间:{{ time }}</span>
+          </h5>
+        </el-main></el-container
+      >
+    </router-link>
   </div>
 </template>
 <script>
@@ -22,7 +26,32 @@ export default {
     return {};
   },
 
-  props: {},
+  props: {
+    title: {
+      type: String,
+      default: "标题",
+    },
+    introduction: {
+      type: String,
+      default: "简介",
+    },
+    look: {
+      type: Number,
+      default: 0,
+    },
+    time: {
+      type: String,
+      default: "2021年1月1日",
+    },
+    coverimg: {
+      type: String,
+      default: "../assets/photo/1.png",
+    },
+    aid: {
+      type: Number,
+      default: 1000000001,
+    },
+  },
 
   methods: {},
 };

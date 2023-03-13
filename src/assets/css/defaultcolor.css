@@ -24,6 +24,7 @@
   /* 文字阴影 */
   --main-text-shadow: 0 0 4px rgba(122, 121, 121, 0.494);
   --main-text-shadow-logo-big: 0 0 8px rgba(21, 21, 21, 0.4);
+  --main-text-shadow-white: 2px 2px 8px rgba(222, 219, 219, 0.852);
 
   /* 边框颜色 */
   --main-box-shadow: 0 0 3px 0px rgba(21, 21, 21, 0.6);

@@ -15,7 +15,14 @@
       </div>
       <div class="secord">
         <li class="height" v-for="item in items" :key="item">
-          <ArticleNote></ArticleNote>
+          <ArticleNote
+            :title="item.title"
+            :introduction="item.introduction"
+            :look="item.look"
+            :time="item.updatetime"
+            :coverimg="item.coverimg"
+            :aid="item.aid"
+          ></ArticleNote>
         </li>
       </div>
       <div class="thired">
@@ -48,18 +55,42 @@
 // @ is an alias to /src
 import CarouselPanel from "@/components/CarouselPanel";
 import ArticleNote from "@/components/ArticleNote";
+import { ref } from "vue";
 
 export default {
   data() {
     return {
       parentMessage: "Parent",
-      items: [{ message: "Foo" }, { message: "Bar" }],
     };
   },
   name: "HomeView",
   components: {
     CarouselPanel,
     ArticleNote,
+  },
+  setup() {
+    const items = ref("[]");
+    var myHeaders = new Headers();
+    myHeaders.append("User-Agent", "Apifox/1.0.0 (https://www.apifox.cn)");
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      redirect: "follow",
+    };
+
+    fetch("http://127.0.0.1:6521/api/article/list", requestOptions)
+      .then((response) => response.text())
+      .then((result) => {
+        console.log(result);
+        items.value = JSON.parse(result);
+        var x = items.value.data;
+        items.value = JSON.parse(x);
+      })
+      .catch((error) => console.log("error", error));
+    return {
+      items,
+    };
   },
 };
 </script>
