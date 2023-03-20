@@ -79,7 +79,7 @@ export default {
       redirect: "follow",
     };
 
-    fetch("http://127.0.0.1:6521/api/article/list", requestOptions)
+    fetch("http://127.0.0.1:6521/api/article/publiclist", requestOptions)
       .then((response) => response.text())
       .then((result) => {
         console.log(result);

@@ -8,6 +8,9 @@
           type="text"
           placeholder="查找文章"
           v-on:keyup.enter="searchit"
+          v-focus
+          @keydown.enter="searcharticle"
+          v-model="searchname"
         />
         <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
       </div>
@@ -20,6 +23,9 @@
 </template>
 
 <script>
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+
 window.addEventListener("scroll", function () {
   let topbar = document.querySelector(".topbar");
   if (window.scrollY > 0) {
@@ -36,6 +42,19 @@ export default {
   },
   props: {},
   methods: {},
+  setup() {
+    const route = useRouter();
+    const searchname = ref("");
+    const searcharticle = () => {
+      var name = searchname.value;
+      route.push({ path: "/search", query: { name: name } });
+    };
+
+    return {
+      searcharticle,
+      searchname,
+    };
+  },
 };
 </script>
 
