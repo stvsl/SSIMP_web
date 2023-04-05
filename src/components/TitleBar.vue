@@ -3,20 +3,14 @@
     <span class="logo">北镇闾山</span>
     <div class="center">
       <div class="search">
-        <input
-          id="searchbar"
-          type="text"
-          placeholder="查找文章"
-          v-on:keyup.enter="searchit"
-          v-focus
-          @keydown.enter="searcharticle"
-          v-model="searchname"
-        />
+        <input id="searchbar" type="text" placeholder="查找文章" v-on:keyup.enter="searchit" @keydown.enter="searcharticle"
+          v-model="searchname" />
         <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
       </div>
     </div>
     <ul class="biaoti">
       <li><a href="/">首页</a></li>
+      <li><a href="/#/pictures">图集</a></li>
       <li><a href="/#/about">关于</a></li>
     </ul>
   </div>
@@ -36,7 +30,7 @@ window.addEventListener("scroll", function () {
 });
 export default {
   name: "TitleBar",
-  created() {},
+  created() { },
   data() {
     return {};
   },
@@ -64,6 +58,7 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+
 .topbar {
   position: fixed;
   top: 0;
@@ -86,6 +81,7 @@ export default {
   font-family: logoFont;
   line-height: 25px;
 }
+
 .biaoti {
   position: relative;
   display: flex;
@@ -93,9 +89,11 @@ export default {
   align-items: center;
   list-style: none;
 }
+
 .biaoti li {
   position: relative;
 }
+
 .biaoti a {
   position: relative;
   margin: 0 10px;
@@ -105,17 +103,21 @@ export default {
   color: var(--main-text-color);
   text-decoration: none;
 }
+
 .bian {
   padding: 15px 100px;
   background-color: var(--main-daohanglan-bg-color);
 }
+
 .bian .logo,
 .topbar.bian a {
   color: var(--main-text-color-white);
 }
+
 .center {
   width: 40%;
 }
+
 .center .search {
   margin: auto;
   width: 100%;
