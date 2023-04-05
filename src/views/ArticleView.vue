@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="article">
-      <img :src="article.contentimg" />
+      <img class="topimg" :src="article.contentimg" />
       <div class="content">
         <h1 class="biaoti">{{ article.title }}</h1>
         <h2 class="jianjie">
@@ -11,7 +11,7 @@
     </div>
     <div class="text">
       <div class="one"></div>
-      <div class="two" v-html="text"></div>
+      <div class="two artcont" v-html="text"></div>
       <div class="three">
         <div class="center">
           <p>发布日期：{{ article.writetime }}</p>
@@ -34,7 +34,7 @@ import { ref } from "vue";
 
 export default {
   name: "ArticleView",
-  created() {},
+  created() { },
   ArticleDetails,
   data() {
     return {};
@@ -100,6 +100,7 @@ export default {
   width: 90%;
   margin-left: 3%;
 }
+
 .center {
   margin: left;
   width: 162px;
@@ -107,6 +108,7 @@ export default {
   font-size: 13px;
   margin-left: 38px;
 }
+
 .content {
   position: absolute;
   top: 75%;
@@ -116,6 +118,22 @@ export default {
   width: 100%;
   height: 200px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
+.artcont {
+  font-size: 1.2rem;
+  color: var(--main-text-color);
+  text-align: left;
+  justify-content: left;
+  align-items: left;
+  margin-left: 20px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-family: SimSun;
+  max-width: 70%;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+  margin: auto;
 }
 
 .jianjie {
@@ -134,6 +152,7 @@ export default {
   overflow: hidden;
   margin: auto;
 }
+
 .biaoti {
   text-align: center;
   width: 100%;
@@ -145,11 +164,13 @@ export default {
   position: relative;
   height: 35px;
 }
+
 .three {
   flex-grow: 1;
   text-align: left;
   margin-left: 15px;
 }
+
 .two {
   flex-grow: 5;
   max-width: 66%;
@@ -157,25 +178,41 @@ export default {
   line-height: 25px;
   text-align: left;
   font-weight: 800px;
+  overflow: hidden;
 }
+
+
+
+
 .one {
   flex-grow: 1;
 }
+
 .article {
   width: 100%;
   margin-top: 20px;
   position: relative;
 }
-img {
+
+.topimg {
   width: 100%;
   height: 400px;
-  overflow: hidden;
   object-fit: cover;
 }
+
 .text {
   display: flex;
   margin-top: 45px;
   margin-bottom: 45px;
   min-height: 45vh;
+}
+</style>
+
+<style>
+.two img {
+  width: 80% !important;
+  height: 100%;
+  margin-left: 10%;
+  object-fit: cover;
 }
 </style>

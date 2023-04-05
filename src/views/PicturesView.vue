@@ -622,7 +622,8 @@ export default {
       'http://cdn.ssimp.stvsljl.com/staticimg%2F%E8%80%B6%E5%BE%8B%E6%A5%9A4.jpg',
       'http://cdn.ssimp.stvsljl.com/staticimg%2F%E8%80%B6%E5%BE%8B%E6%A5%9A6.jpg',
       'http://cdn.ssimp.stvsljl.com/staticimg%2F%E8%80%B6%E5%BE%8B%E6%A5%9A7.jpg']);
-    const youmu = ref(['http://cdn.ssimp.stvsljl.com/staticimg%2F%E5%9C%86%E9%80%9A%E6%AE%BF1.jpg/staticimg%2F%E6%B8%B8%E7%9B%AE1.jpg',
+    const youmu = ref(['http://cdn.ssimp.stvsljl.com/staticimg%2F%E5%9C%86%E9%80%9A%E6%AE%BF1.jpg',
+      'http://cdn.ssimp.stvsljl.com/staticimg%2F%E6%B8%B8%E7%9B%AE1.jpg',
       'http://cdn.ssimp.stvsljl.com/staticimg%2F%E6%B8%B8%E7%9B%AE2.jpg',]);
     const yuantongdian = ref(['http://cdn.ssimp.stvsljl.com/staticimg%2F%E5%9C%86%E9%80%9A%E6%AE%BF1.jpg']);
     const zufeng = ref(['http://cdn.ssimp.stvsljl.com/staticimg%2F%E7%A5%96%E5%B3%B01.jpg',
@@ -681,10 +682,13 @@ img {
 
 .one {
   flex-grow: 1;
+  width: calc(20%);
 }
 
 .two {
   flex-grow: 4;
+  width: calc(80%);
+
 }
 
 .buju {

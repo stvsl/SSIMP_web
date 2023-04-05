@@ -12,44 +12,37 @@ export default {
   props: {
     images: {
       type: Array,
-      default: () => [
-        'https://ts3.cn.mm.bing.net/th?id=ORMS.cff9f4ba0298ba5b7e9bde0ee8b0feb0&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0',
-        'https://ts3.cn.mm.bing.net/th?id=ORMS.4e90a63fe0a352982d8c35261bccba69&pid=Wdp&w=300&h=156&qlt=90&c=1&rs=1&dpr=1&p=0',
-        'https://ts3.cn.mm.bing.net/th?id=ORMS.cff9f4ba0298ba5b7e9bde0ee8b0feb0&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0',
-        'https://ts3.cn.mm.bing.net/th?id=ORMS.cff9f4ba0298ba5b7e9bde0ee8b0feb0&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0',
-        'https://ts3.cn.mm.bing.net/th?id=ORMS.4e90a63fe0a352982d8c35261bccba69&pid=Wdp&w=300&h=156&qlt=90&c=1&rs=1&dpr=1&p=0',
-        'https://ts3.cn.mm.bing.net/th?id=ORMS.cff9f4ba0298ba5b7e9bde0ee8b0feb0&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0',
-        'https://ts3.cn.mm.bing.net/th?id=ORMS.4e90a63fe0a352982d8c35261bccba69&pid=Wdp&w=300&h=156&qlt=90&c=1&rs=1&dpr=1&p=0'
-      ]
     }
   },
 }
 </script>
 <style>
 .WaterfallList {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  margin: 0 auto;
+  margin: 20px 0;
+  flex-direction: row;
 }
 
 .item {
-  float: left;
-  width: calc(33.33% - 20px);
-  height: 100%;
-  margin: 10px;
-  position: relative;
-  box-shadow: inset 0 0 0 2px #969595;
+  max-width: calc(33.3333% - 20px);
+  height: 300px;
   border-radius: 5px;
   overflow: hidden;
-}
-
-.item:hover {
-  box-shadow: inset 0 0 0 2px #969595, 0 0 0 2px #969595;
+  margin: 5px;
 }
 
 .item img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   transition: all 0.2s ease;
+}
+
+
+.item:hover {
+  box-shadow: inset 0 0 0 2px #969595, 0 0 0 2px #969595;
 }
 
 .item img:hover {

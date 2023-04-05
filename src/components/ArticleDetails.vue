@@ -18,7 +18,7 @@
 import { ref } from "vue";
 export default {
   name: "ArticleDetails",
-  created() {},
+  created() { },
   data() {
     return {};
   },
@@ -65,6 +65,7 @@ export default {
 .el-carousel__item {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.134), rgba(0, 0, 0, 0.5));
 }
+
 .el-carousel__item .panel img {
   /* 缩放图片 */
   background-size: contain;
@@ -76,6 +77,7 @@ export default {
   height: 100%;
   overflow: hidden;
 }
+
 .panel {
   width: 100%;
   height: 100%;
@@ -83,6 +85,7 @@ export default {
   align-items: center;
   overflow: hidden;
 }
+
 .el-carousel__item h3 {
   opacity: 0.75;
   margin: 0;
@@ -101,6 +104,7 @@ export default {
   text-shadow: var(--main-text-shadow);
   top: 38%;
 }
+
 .title {
   position: relative;
   font-size: 1.2rem;
@@ -115,6 +119,7 @@ export default {
   line-height: 20px;
   top: 37%;
 }
+
 .content {
   position: absolute;
   top: 70%;
@@ -124,6 +129,7 @@ export default {
   width: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.779));
 }
+
 .articledetails {
   margin: left;
   margin-left: 22px;
