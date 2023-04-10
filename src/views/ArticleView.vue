@@ -66,10 +66,7 @@ export default {
     fetch("http://127.0.0.1:6521/api/article/detail", requestOptions)
       .then((response) => response.text())
       .then((result) => {
-        console.log(result);
-        article.value = JSON.parse(result);
-        var x = article.value.data;
-        article.value = JSON.parse(x);
+        article.value = JSON.parse(JSON.parse(result).data);
         text.value = article.value.text;
         article.value.updatetime =
           article.value.updatetime.substring(0, 4) +
@@ -181,16 +178,12 @@ export default {
   overflow: hidden;
 }
 
-
-
-
 .one {
   flex-grow: 1;
 }
 
 .article {
   width: 100%;
-  margin-top: 20px;
   position: relative;
 }
 

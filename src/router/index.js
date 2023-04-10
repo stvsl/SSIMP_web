@@ -45,9 +45,18 @@ const routes = [
   },
 ];
 
+
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  fetch("http://127.0.0.1:6521/api/data/web/visit", {
+    method: "GET",
+    credentials: "include",
+  })
+  next();
 });
 
 export default router;
